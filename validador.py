@@ -2,7 +2,7 @@ def cpf_validate(cpf):
     # verify if its only numbers and turning each iterable character into an int so that the isdigit function works:
     cpf = [int(char) for char in cpf if char.isdigit()]
 
-    # verify if has 11 digits:
+    # verify if it has 11 digits:
     if len(cpf) == 11:
         pass
     else:
