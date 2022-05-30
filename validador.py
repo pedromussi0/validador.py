@@ -3,17 +3,13 @@ def cpf_validate(cpf):
     cpf = [int(char) for char in cpf if char.isdigit()]
 
     # verify if it has 11 digits:
-    if len(cpf) == 11:
-        pass
-    else:
+    if len(cpf) != 11:
         return False
 
     # cross out exception cases (11111111111,22222222222,[...]) :
     if cpf == cpf[::-1]:
         return False
-    else:
-        pass
-
+    
     #  Validate both verification digits:
     for i in range(9, 11):
         value = sum(cpf[num] * ((i + 1) - num) for num in range(0, i))
@@ -22,7 +18,6 @@ def cpf_validate(cpf):
             return False
         else:
             return True
-
 
 cpf = input("digite o cpf : ")
 
