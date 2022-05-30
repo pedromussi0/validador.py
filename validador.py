@@ -8,7 +8,7 @@ def cpf_validate(cpf):
     else:
         return False
 
-    # cross out exception cases (111111111111,22222222222,[...]) :
+    # cross out exception cases (11111111111,22222222222,[...]) :
     if cpf == cpf[::-1]:
         return False
     else:
